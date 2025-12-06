@@ -5,13 +5,14 @@ type Props = {
 };
 
 export default async function DownloadPage({ params }: Props) {
-  // Получаем параметры (Next.js 15)
-  const resolvedParams = await params;
+  // !!! ВОТ ГЛАВНОЕ ИСПРАВЛЕНИЕ !!!
+  // Мы ждем (await), пока параметры загрузятся
+  const { fileId } = await params;
   
-  // Рендерим ТОЛЬКО красивый компонент, без лишнего текста
   return (
     <main className="min-h-screen bg-black flex items-center justify-center p-4">
-      <DownloadView fileId={resolvedParams.fileId} />
+      {/* Передаем уже полученный fileId */}
+      <DownloadView fileId={fileId} />
     </main>
   );
 }

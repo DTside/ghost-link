@@ -23,4 +23,4 @@
 
 1. **Клонировать репозиторий:**
    ```bash
-   git clone [https://github.com/ВАШ_ЮЗЕРНЕЙМ/ghost-link.git](https://github.com/ВАШ_ЮЗЕРНЕЙМ/ghost-link.git)
+   git clone [https://github.com/DTside/ghost-link.git](https://github.com/DTside/ghost-link.git)
